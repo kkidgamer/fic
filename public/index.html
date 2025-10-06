@@ -3,9 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Friends International Centre - Quaker Church on Ngong Road, Nairobi. Join our worship, events, and community programs." />
-    <meta name="keywords" content="Quaker, Friends International Centre, Nairobi, Ngong Road, church, worship" />
-    <title>Friends International Centre | Nairobi Quakers</title>
+    <meta name="description" content="Friends International Centre - Quaker Church on Ngong Road, Nairobi." />
+    <title>Friends International Centre</title>
+    <script src="%PUBLIC_URL%/env.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'fic-blue': '#1E3A8A',
+              'fic-light-blue': '#93C5FD',
+              'fic-bg': '#F9FAFB',
+            },
+            keyframes: {
+              slideInLeft: {
+                "0%": { transform: "translateX(-100%)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+              slideInRight: {
+                "0%": { transform: "translateX(100%)", opacity: "0" },
+                "100%": { transform: "translateX(0)", opacity: "1" },
+              },
+            },
+            animation: {
+              slideInLeft: "slideInLeft 1s ease-out forwards",
+              slideInRight: "slideInRight 1s ease-out forwards",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>
